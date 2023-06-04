@@ -22,14 +22,14 @@ public class ValidacionTest {
         assertTrue(asignado);
     }
     @Test
-    public void validacionNombreIncorrecto(){
+    public void give_name_when_validate_correct_then(){
         Validacion validacion = new Validacion();
         String nombre = "Danie1";
         boolean asignado = validacion.validarNombre(nombre);
         assertFalse(asignado);
     }
     @Test
-    public void validacionNombreCorrecto(){
+    public void give_name_when_validate_incorrect_then(){
         Validacion validacion = new Validacion();
         String nombre = "Daniel";
         boolean asignado = validacion.validarNombre(nombre);
@@ -37,14 +37,14 @@ public class ValidacionTest {
 
     }
     @Test
-    public void validacionApellidoIncorrecto(){
+    public void give_lastname_when_validate_correct_then(){
         Validacion validacion = new Validacion();
         String nombre = "Varg0as";
         boolean asignado = validacion.validarNombre(nombre);
         assertFalse(asignado);
     }
     @Test
-    public void validacionApellidoCorrecto(){
+    public void give_lastname_when_validate_incorrect_then(){
         Validacion validacion = new Validacion();
         String nombre = "Vargas";
         boolean asignado = validacion.validarNombre(nombre);
