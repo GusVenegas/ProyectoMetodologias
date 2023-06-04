@@ -3,7 +3,6 @@ package servicio.impl;
 import Modelo.Cliente;
 import Modelo.ClienteDAO;
 import Modelo.Validacion;
-import servicio.IClienteService;
 
 public class ClienteService implements IClienteService {
 

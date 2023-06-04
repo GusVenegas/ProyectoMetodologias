@@ -1,7 +1,6 @@
 package servicio.impl;
 
 import Modelo.Validacion;
-import servicio.IValidacionService;
 
 public class ValidacionService implements IValidacionService {
 
