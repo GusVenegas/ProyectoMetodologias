@@ -48,7 +48,7 @@ public class Pedido {
 	}
 
 	public double getSubtotal() {
-		
+		calcularSubTotal();
 		return subtotal;
 	}
 

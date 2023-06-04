@@ -34,7 +34,6 @@ public class ValidacionTest {
         String nombre = "Daniel";
         boolean asignado = validacion.validarNombre(nombre);
         assertTrue(asignado);
-
     }
     @Test
     public void give_lastname_when_validate_correct_then(){
@@ -49,7 +48,6 @@ public class ValidacionTest {
         String nombre = "Vargas";
         boolean asignado = validacion.validarNombre(nombre);
         assertTrue(asignado);
-
     }
 
 
