@@ -10,6 +10,7 @@ import java.util.List;
 @RunWith(value = Parameterized.class)
 public class ValidacionParametersTest {
     private String email;
+
     @Parameterized.Parameters
     public static Iterable<String> parameters(){
         List<String> objects = new ArrayList<String>();
@@ -30,6 +31,5 @@ public class ValidacionParametersTest {
         Validacion validacion = new Validacion();
         assertTrue(validacion.validarCorreoElectronico(email));
     }
-
 
 }

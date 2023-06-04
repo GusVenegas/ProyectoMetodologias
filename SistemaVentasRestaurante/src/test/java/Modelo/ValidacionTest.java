@@ -8,12 +8,13 @@ public class ValidacionTest {
     @Test
     public void give_cedula_when_validate_correct_then(){
         Validacion validacion = new Validacion();
-        String numCedula = "0876";
-        boolean asignado = validacion.validarCedula(numCedula);
-        assertFalse(asignado);
-       // assertFalse(validacion.validarCedula("0192"));
+         /*String numCedula = "0876";
+       boolean asignado = validacion.validarCedula(numCedula);
+       assertFalse(asignado);*/
+        assertFalse(validacion.validarCedula("0192"));
 
     }
+
     @Test
     public void give_cedula_when_validate_incorrect_then(){
         Validacion validacion = new Validacion();
@@ -46,7 +47,7 @@ public class ValidacionTest {
     @Test
     public void give_email_when_validate_correct_then(){
         Validacion validacion = new Validacion();
-        String correo = "theadmin@gmail.ccom";
+        String correo = "theadmin@gmail.com";
         boolean asignado = validacion.validarCorreoElectronico(correo);
         assertTrue(asignado);
     }
