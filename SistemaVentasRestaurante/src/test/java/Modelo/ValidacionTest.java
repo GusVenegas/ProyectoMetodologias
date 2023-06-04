@@ -46,7 +46,7 @@ public class ValidacionTest {
     @Test
     public void give_email_when_validate_correct_then(){
         Validacion validacion = new Validacion();
-        String correo = "theadmin@gmail.com";
+        String correo = "theadmin@gmail.ccom";
         boolean asignado = validacion.validarCorreoElectronico(correo);
         assertTrue(asignado);
     }
