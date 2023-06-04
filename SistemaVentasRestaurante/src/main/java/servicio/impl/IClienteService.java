@@ -1,6 +1,6 @@
 package servicio.impl;
 
-import Modelo.Cliente;
+import Domain.Cliente;
 
 public interface IClienteService {
 

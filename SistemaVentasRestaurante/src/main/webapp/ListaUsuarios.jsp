@@ -1,4 +1,4 @@
-<%@page import="Modelo.Cliente"%>
+<%@page import="Domain.Cliente"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -24,7 +24,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><i class="fas fa-utensils"></i>Tabla de Clientes</a>
+        <a class="navbar-brand" href="index.jsp"><i class="fas fa-utensils"></i>Tabla de Clientes</a>
        
         <form class="form-inline ml-auto" action="search.jsp" method="get">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" name="searchQuery">

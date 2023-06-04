@@ -1,4 +1,4 @@
-package Modelo;
+package Domain;
 
 import org.junit.Test;
 import org.mockito.Mockito;

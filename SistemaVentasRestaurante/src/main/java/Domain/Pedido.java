@@ -1,20 +1,32 @@
-package Modelo;
+package Domain;
 
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.ArrayList;
-@Builder
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class Pedido {
-	private String hora;
-    private ArrayList<Producto> listaProducto = new ArrayList();
-	private int mesa;
-    private int cantidad;
-    private double subtotal = 0;
 
+@Data
+@Entity
+@Table(name = "pedidos")
+public class Pedido {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(name = "hora")
+	private String hora;
+
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "pedido_id")
+	private ArrayList<Producto> listaProducto = new ArrayList<>();
+
+	@Column(name = "num_mesa")
+	private int mesa;
+
+	@Column(name = "cantidad")
+	private int cantidad;
+
+	@Column(name = "subtotal")
+	private double subtotal = 0;
  
     public void agregarPedido(Producto product) {
     	listaProducto.add(product);
@@ -33,6 +45,4 @@ public class Pedido {
 			subtotal =subtotal+ (producto.getPrecio()*producto.getCantidad());
 		}
     }
-	
-	
 }

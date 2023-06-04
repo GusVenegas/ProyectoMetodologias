@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Modelo.Cliente;
-import Modelo.ClienteDAO;
+import Domain.Cliente;
+import Domain.ClienteDAO;
 
 /**
  * Servlet implementation class restauranteControlador
@@ -32,10 +32,9 @@ public class restauranteControlador extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-
-
- {
+	{
 		// TODO Auto-generated method stub
+		System.out.println("GetMetod");
 		ruteador(request,response);
 	}
 

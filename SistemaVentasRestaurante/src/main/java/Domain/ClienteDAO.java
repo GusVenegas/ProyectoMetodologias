@@ -1,4 +1,4 @@
-package Modelo;
+package Domain;
 import java.util.List;
 
 
@@ -72,7 +72,7 @@ public class ClienteDAO {
 	
 	public List<Cliente> getAllClientes() {
         EntityManager em = emf.createEntityManager();
-        List<Cliente> clientes = null;
+        List<Cliente> clientes ;
 
         try {
             TypedQuery<Cliente> query = em.createQuery("SELECT c FROM Cliente c", Cliente.class);

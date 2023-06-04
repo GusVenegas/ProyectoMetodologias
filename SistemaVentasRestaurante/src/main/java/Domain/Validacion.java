@@ -1,4 +1,4 @@
-package Modelo;
+package Domain;
 
 public class Validacion {
 	private static final String patronNombre = "^[a-zA-Z]+$";
@@ -35,8 +35,8 @@ public class Validacion {
 
 	public static boolean validarNumerosCedula(String cedula) {
 		int suma = 0;
-		int a[] = new int[cedula.length() / 2];
-		int b[] = new int[(cedula.length() / 2)];
+		int[] a = new int[cedula.length() / 2];
+		int[] b = new int[(cedula.length() / 2)];
 		int c = 0;
 		int d = 1;
 		for (int i = 0; i < cedula.length() / 2; i++) {

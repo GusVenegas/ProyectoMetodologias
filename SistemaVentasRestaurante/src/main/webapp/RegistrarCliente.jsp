@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head> <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Cliente</title>
@@ -29,10 +31,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fas fa-home"></i> Inicio</a>
+                    <a class="nav-link" href="index.jsp"><i class="fas fa-home"></i> Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-utensils"></i> Menú</a>
+                    <a class="nav-link" href="#"><i class="fas fa-utensils"></i> MenÃº</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-calendar-alt"></i> Reservas</a>
@@ -46,39 +48,37 @@
 
     <div class="container">
        
-        <form method="POST" action="Sv_Cliente?ruta=registrar">
+        <form method="POST" action="ClientAPI?ruta=registrar">
             <fieldset class="w-40">
                 <div class="form-group">
                     <label for="nombre"><i class="material-icons">person</i> Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre">
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
                 </div>
                 <div class="form-group">
                     <label for="apellido"><i class="material-icons">person</i> Apellido:</label>
-                    <input type="text" class="form-control" id="apellido" name="apellido">
+                    <input type="text" class="form-control" id="apellido" name="apellido" required>
                 </div>
                 <div class="form-group">
-                    <label for="direccion"><i class="material-icons">location_on</i> Dirección:</label>
-                    <input type="text" class="form-control" id="direccion" name="direccion">
+                    <label for="direccion"><i class="material-icons">location_on</i> DirecciÃ³n:</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" required>
                 </div>
                 <div class="form-group">
-                    <label for="cedula"><i class="material-icons">credit_card</i> Cédula:</label>
-                    <input type="text" class="form-control" id="cedula" name="cedula">
+                    <label for="cedula"><i class="material-icons">credit_card</i> CÃ©dula:</label>
+                    <input type="text" class="form-control" id="cedula" name="cedula" required>
                 </div>
                 <div class="form-group">
-                    <label for="correo"><i class="material-icons">email</i> Correo electrónico:</label>
-                    <input type="text" class="form-control" id="correo" name="correo">
+                    <label for="correo"><i class="material-icons">email</i> Correo electrÃ³nico:</label>
+                    <input type="text" class="form-control" id="correo" name="correo" required>
                 </div>
                 <div class="form-group">
-                    <label for="telefono"><i class="material-icons">phone</i> Teléfono:</label>
-                    <input type="text" class="form-control" id="telefono" name="telefono">
+                    <label for="telefono"><i class="material-icons">phone</i> TelÃ³fono:</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" required>
                 </div>
                 <button type="submit" class="btn btn-primary"><i class="fas fa-user-plus"></i> Registrar Cliente</button>
             </fieldset>   
 
     </form>
-    <form action="Sv_Cliente" method="GET">       
-        <input type="submit" value="ver lista de ususarios">
-    </form>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

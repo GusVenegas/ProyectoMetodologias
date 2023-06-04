@@ -1,6 +1,4 @@
-package Modelo;
-
-import java.util.ArrayList;
+package Domain;
 
 public class OrdenPedidos {
 	

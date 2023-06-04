@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Modelo.Admin;
-import Modelo.Cliente;
-import Modelo.ClienteDAO;
+import Domain.Admin;
+import Domain.Cliente;
+import Domain.ClienteDAO;
 
 /**
  * Servlet implementation class Sv_Cliente

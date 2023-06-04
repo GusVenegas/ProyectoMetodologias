@@ -1,8 +1,8 @@
 package servicio.impl;
 
-import Modelo.Cliente;
-import Modelo.ClienteDAO;
-import Modelo.Validacion;
+import Domain.Cliente;
+import Domain.ClienteDAO;
+import Domain.Validacion;
 
 public class ClienteService implements IClienteService {
 

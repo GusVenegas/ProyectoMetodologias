@@ -1,4 +1,4 @@
-package Modelo;
+package Domain;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
