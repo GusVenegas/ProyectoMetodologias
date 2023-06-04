@@ -6,6 +6,7 @@ public class Admin {
     Pedido pedido;
     Factura factur;
 
+
     public Admin() {
     }
 
@@ -37,6 +38,9 @@ public class Admin {
     public void emitirDocumentos(){
         factur = new Factura(client, pedido);
         factur.emitirFactura();
+
+    }
+    public void tommarPedido(){
 
     }
 }
