@@ -13,6 +13,7 @@ public class Factura {
         this.pedido = pedido;
     }
     public void emitirFactura(){
+
     	pedido.getSubtotal();
         this.pedidos = new OrdenPedidos();
         pedidos.generarOrden();	    	

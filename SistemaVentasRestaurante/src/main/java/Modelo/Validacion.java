@@ -2,7 +2,7 @@ package Modelo;
 
 public class Validacion {
 	private static final String patronNombre = "^[a-zA-Z]+$";
-	private static final String patronApellido = "^[a-zA-Z]";
+	private static final String patronApellido = "^[a-zA-Z]+$";
 	private static final String patronDireccion = "^[a-zA-Z0-9\\s]+(\\s+[a-zA-Z0-9\\s]+)*$";
 	private static final String patronCorreo = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
 
@@ -67,7 +67,7 @@ public class Validacion {
 		return entrada.matches("0\\d{9}\"");
 	}
 
-	private static boolean validarCorreoElectronico(String correo) {
+	public static boolean validarCorreoElectronico(String correo) {
 		return correo.matches(patronCorreo);
 	}
 }
