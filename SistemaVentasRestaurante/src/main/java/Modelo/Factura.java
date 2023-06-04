@@ -1,12 +1,16 @@
 package Modelo;
 
+import lombok.*;
+
+@Data
+
 public class Factura {
-   
-    double total;
-    Cliente customer;
-    Pedido pedido;
-    OrdenPedidos pedidos;
-    int numFactura;
+
+    private double total;
+    private Cliente customer;
+    private Pedido pedido;
+    private OrdenPedidos pedidos;
+    private int numFactura;
     
     public  Factura(Cliente client, Pedido pedido) {
         this.customer = client;
@@ -16,32 +20,22 @@ public class Factura {
 
     	pedido.getSubtotal();
         this.pedidos = new OrdenPedidos();
-        pedidos.generarOrden();	    	
+        pedidos.generarOrden();
     }
-    
-    
- public  double calcularTotal(Pedido pedido) {
+    public  double calcularTotal(Pedido pedido) {
     	
     	total= pedido.getSubtotal()+(pedido.getSubtotal()* 0.12);
     	
 		return calcularDescuento();
 	}
- 
- public double calcularDescuento() {
-  double aplicarDescuento=total;
-  
- 	 	if(total>20) {
- 		
- 		aplicarDescuento= total-(total*0.1);
- 				
- 	}
-		return aplicarDescuento;
-	}
-    
-    
-    
-   
+    public double calcularDescuento() {
+        double aplicarDescuento=total;
 
+        if(total>20)
+            aplicarDescuento= total-(total*0.1);
+
+        return aplicarDescuento;
+    }
 }
 
 

@@ -61,6 +61,9 @@ public class restauranteControlador extends HttpServlet {
 		case "MostrarPedidos" :
 			//implementacion de pedidos	
 			break ;
+		case  "default":
+			System.out.println("ingresa por default");
+			break;
 		default:
 			this.listaDeUsuarios(request, response);
 		}

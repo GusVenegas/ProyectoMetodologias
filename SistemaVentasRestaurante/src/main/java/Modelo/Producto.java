@@ -1,51 +1,35 @@
 package Modelo;
 
+import lombok.*;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Column;
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "productos")
 public class Producto {
 
-    int id;
-    String nombre;
-    double precio;
-    int cantidad;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
+
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "precio")
+    private double precio;
+
+    @Column(name = "cantidad")
+    private int cantidad;
 
 
-    public Producto(int id, String nombre, double precio, int cantidad) {
-        this.nombre = nombre;
-        this.id = id;
-        this.precio = precio;
-        this.cantidad = cantidad;
-    }
-
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public double getPrecio() {
-        return precio;
-    }
-
-    public int getCantidad() {
-        return cantidad;
-    }
 }
