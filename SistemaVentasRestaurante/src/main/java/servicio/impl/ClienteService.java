@@ -16,10 +16,15 @@ public class ClienteService implements IClienteService {
     @Override
     public void create(Cliente cliente) throws Exception {
         boolean validar = Validacion.validarCedula(cliente.getCedula());
-        boolean validarNombre = Validacion.validarNombre(cliente.getCedula());
+        boolean validarNombre = Validacion.validarCedula(cliente.getNombre());
         if (!validar) {
             throw new Exception("Error numero de cedula incorrecto");
         }
+        if(!validarNombre){
+            throw new Exception("Error nombre");
+        }
         dao.create(cliente);
     }
+
+
 }

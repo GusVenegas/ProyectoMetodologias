@@ -10,5 +10,9 @@ public class ValidacionService implements IValidacionService {
     public boolean validarCedula(String cedula) {
         return Validacion.validarCedula(cedula);
     }
+    @Override
+    public boolean validarNombre(String nombre){
+        return Validacion.validarNombre(nombre);
+    }
 
 }
